@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacy</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+  <div class="topbar">
+    <h3>pharmacy Management</h3>
+
+
+  </div>
+  <div class="container">
+
+
+    <div class="cardBox">
+      <div class="card">
+        <div>
+          <div class="numbers"id="dateTime"></div>
+          <div class="cardName " >Date and time</div>
+        </div>
+        <div class="iconBx">
+          <ion-icon name="calendar-outline"></ion-icon>
+        </div>
+        
+      </div>
+      <div class="card">
+        <div>
+          <div id="productCount" class="numbers">80</div>
+          <div class="cardName">Sales</div>
+        </div>
+        <div class="iconBx">
+          <ion-icon name="cart-outline"></ion-icon>
+        </div>
+      </div>
+      <div class="card">
+        <div>
+          <div id="totalEarnings" class="numbers"></div>
+          <div class="cardName">Earning</div>
+        </div>
+        <div class="iconBx">
+          <ion-icon name="cash-outline"></ion-icon>
+        </div>
+      </div>
+
+    </div>
+    <div class="container mt-5">
+      <div class="form-group">
+        <label for="productName">Product Name</label>
+        <input type="text" class="form-control" id="productName" placeholder="Enter product name">
+      </div>
+      <div class="form-group">
+        <label for="productPrice">Product Price</label>
+        <input type="text" class="form-control" id="productPrice" placeholder="Enter product price">
+      </div>
+      <div class="form-group">
+        <label for="productCategory">Product Category</label>
+        <input type="text" class="form-control" id="productCategory" placeholder="Enter product category">
+      </div>
+      <div class="form-group">
+        <label for="productDesc">Product Description</label>
+        <input type="text" class="form-control" id="productDesc" placeholder="Enter product description">
+      </div>
+      <div class="search">
+        <label>
+          <input  class="form-control" type="text" placeholder="Search here"onkeyup="searchProducts(this.value)">
+        </label>
+      </div>
+      <button class="btn btn-primary" onclick="addProduct()">Add Product</button>
+      <button class="btn btn-secondary" onclick="clearForm()">Clear Form</button>
+      
+      <table class="table table-bordered mt-3" style="background-color: rgba(66, 255, 123, 0.712);">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableRow"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="product.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>
